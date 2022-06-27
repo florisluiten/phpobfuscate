@@ -22,5 +22,35 @@ foreach ($characters as $a) {
         if (!in_array($calulated, $characters) && ctype_alnum($calulated)) {
             echo "$a ^ $b = $calulated\n";
         }
+
+        $calulated = $a ^ ~$b;
+
+        if (!in_array($calulated, $characters) && ctype_alnum($calulated)) {
+            echo "$a ^ ~$b = $calulated\n";
+        }
+
+        $calulated = ~$a ^ $b;
+
+        if (!in_array($calulated, $characters) && ctype_alnum($calulated)) {
+            echo "~$a ^ $b = $calulated\n";
+        }
+
+        $calulated = $a & $b;
+
+        if (!in_array($calulated, $characters) && ctype_alnum($calulated)) {
+            echo "$a & $b = $calulated\n";
+        }
+
+        $calulated = $a & ~$b;
+
+        if (!in_array($calulated, $characters) && ctype_alnum($calulated)) {
+            echo "$a & ~$b = $calulated\n";
+        }
+
+        $calulated = ~$a & $b;
+
+        if (!in_array($calulated, $characters) && ctype_alnum($calulated)) {
+            echo "~$a & $b = $calulated\n";
+        }
     }
 }
